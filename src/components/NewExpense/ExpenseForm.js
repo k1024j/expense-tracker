@@ -21,7 +21,7 @@ export default function ExpenseForm({ onSaveExpenseData }) {
     e.preventDefault();
     const expenseData = {
       title: enteredTitle,
-      number: enteredNumber,
+      number: +enteredNumber,
       date: new Date(enteredDate),
     };
 

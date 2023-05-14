@@ -3,6 +3,7 @@ import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
 import Card from "./Card";
 import ExpenseFilter from "./NewExpense/ExpenseFilter";
+import ExpensesChart from "./ExpensesChart";
 
 function Expenses({ items }) {
   const [filteredYear, setFilteredYear] = useState("2020");
@@ -19,6 +20,7 @@ function Expenses({ items }) {
         selectedYear={filteredYear}
         onDateChangeHandler={filterChangeHandler}
       />
+      <ExpensesChart filteredExpenses={filteredExpenses} />
       {filteredExpenses.length === 0 ? (
         <h2 className="expenses-list__fallback">No Expenses found</h2>
       ) : (
